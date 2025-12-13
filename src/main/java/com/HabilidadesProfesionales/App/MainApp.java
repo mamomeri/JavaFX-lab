@@ -1,34 +1,80 @@
 package com.HabilidadesProfesionales.App;
 
+import com.HabilidadesProfesionales.Examples.ButtonExample.ButtonManualExample;
+import com.HabilidadesProfesionales.Examples.ButtonExampleFXML.ButtonFXMLExample;
+import com.HabilidadesProfesionales.Examples.LoginExampleLayoutFXML.LoginExampleLayoutFXMLExample;
+import com.HabilidadesProfesionales.Examples.Stages.StageExample;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.util.Objects;
 
-public class Main extends Application {
-
-    private static Stage primaryStage;
+public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) {
-        primaryStage = stage;
-        loadView("/com/marcos/javafx/launcher/menu.fxml");
+
+        Navigator.init(stage);
+
+        // === ELIGE QUÉ PROBAR (UNA A LA VEZ) ===
+
+        /*
+
+            WindowSpec.SMALL
+            WindowSpec.MEDIUM
+            WindowSpec.LARGE
+            WindowSpec.fixed(width, height) //sin capacidad de maximizar
+            WindowSpec.maximized()
+            WindowSpec.fullscreen()
+            WindowSpec.of(width, height) // ✅ TAMAÑO CUSTOM con control de resizable
+        * */
+        //TUTORIAL
+        //showStageExample();
+        //ejemplos propios
+        showLoginExampleLayoutFXMLExample();
+        //showButtonManualExample();
+        //showButtonFXMLExample();
+
+        //Usa MAVEN para obtener la ruta
+        Image icono = new Image(Objects.requireNonNull(MainApp.class.getResourceAsStream(
+                "/Images/logo.png"
+        )));
+        stage.getIcons().add(icono);
         stage.setTitle("JavaFX Lab");
+        /**
+         stage.setFullScreen(true);
+         stage.getScene().setFill(Color.BURLYWOOD);
+         stage.setFullScreenExitHint("Por favor preciona q \n para cambiar a modo ventana\n");
+         stage.setFullScreenExitKeyCombination(KeyCombination.keyCombination("q"));
+         */
+
         stage.show();
     }
 
-    public static void loadView(String fxmlPath) {
-        try {
-            Parent root = FXMLLoader.load(
-                    Main.class.getResource(fxmlPath)
-            );
-            primaryStage.setScene(new Scene(root));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+
+    /* =====================================================
+       EJEMPLOS TRATABAJADOS (centralizada)
+       ===================================================== */
+    //TUTORIAL https://www.youtube.com/watch?v=As7TEjqJ3Ao&list=PLZPZq0r_RZOM-8vJA3NQFZB7JroDcMwev
+
+    //PROPIOS
+    private void showLoginExampleLayoutFXMLExample(){
+        Navigator.show(new LoginExampleLayoutFXMLExample().view(), WindowSpec.LARGE);
+    }
+    private void showButtonManualExample(){
+        Navigator.show(new ButtonManualExample().view(), WindowSpec.SMALL);
+    }
+    private void showButtonFXMLExample(){
+        Navigator.show(new ButtonFXMLExample().view(), WindowSpec.SMALL);
+    }
+
+    private void showStageExample(){
+        Navigator.show(new StageExample().view(), WindowSpec.SMALL);
     }
 
     public static void main(String[] args) {
