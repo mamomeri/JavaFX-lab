@@ -3,6 +3,7 @@ package com.HabilidadesProfesionales.App;
 import com.HabilidadesProfesionales.Examples.ButtonExample.ButtonManualExample;
 import com.HabilidadesProfesionales.Examples.ButtonExampleFXML.ButtonFXMLExample;
 import com.HabilidadesProfesionales.Examples.LoginExampleLayoutFXML.LoginExampleLayoutFXMLExample;
+import com.HabilidadesProfesionales.Examples.ScenesAndDrawingStuff.DrawingStuffExample;
 import com.HabilidadesProfesionales.Examples.Stages.StageExample;
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -34,6 +35,7 @@ public class MainApp extends Application {
         * */
         //TUTORIAL
         //showStageExample();
+        //showDrawingStuffExample();
         //ejemplos propios
         showLoginExampleLayoutFXMLExample();
         //showButtonManualExample();
@@ -61,6 +63,13 @@ public class MainApp extends Application {
        EJEMPLOS TRATABAJADOS (centralizada)
        ===================================================== */
     //TUTORIAL https://www.youtube.com/watch?v=As7TEjqJ3Ao&list=PLZPZq0r_RZOM-8vJA3NQFZB7JroDcMwev
+    private void showStageExample(){
+        Navigator.show(new StageExample().view(), WindowSpec.SMALL);
+    }
+
+    private void showDrawingStuffExample(){
+        Navigator.show(new DrawingStuffExample().view(), WindowSpec.of(600,600));
+    }
 
     //PROPIOS
     private void showLoginExampleLayoutFXMLExample(){
@@ -73,9 +82,7 @@ public class MainApp extends Application {
         Navigator.show(new ButtonFXMLExample().view(), WindowSpec.SMALL);
     }
 
-    private void showStageExample(){
-        Navigator.show(new StageExample().view(), WindowSpec.SMALL);
-    }
+
 
     public static void main(String[] args) {
         launch(args);
