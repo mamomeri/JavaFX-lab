@@ -1,9 +1,5 @@
 
 
-
-**JAJJAJAJAJAJAJAJAJAJAJJAJA**
-Aquí tienes un bloque listo para pegar en tu **README**:
-
 ## Buenas prácticas para subir un commit (estilo empresa)
 
 ### 1) Antes de commitear

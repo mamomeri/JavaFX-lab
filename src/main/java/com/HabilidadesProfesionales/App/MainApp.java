@@ -2,7 +2,9 @@ package com.HabilidadesProfesionales.App;
 
 import com.HabilidadesProfesionales.Examples.ButtonExample.ButtonManualExample;
 import com.HabilidadesProfesionales.Examples.ButtonExampleFXML.ButtonFXMLExample;
+import com.HabilidadesProfesionales.Examples.EventHandlingSceneBuilder.EventHandlingSceneBuilderExample;
 import com.HabilidadesProfesionales.Examples.LoginExampleLayoutFXML.LoginExampleLayoutFXMLExample;
+import com.HabilidadesProfesionales.Examples.MVCCompleteDesing.MVCCompleteDesignExample;
 import com.HabilidadesProfesionales.Examples.ScenesAndDrawingStuff.DrawingStuffExample;
 import com.HabilidadesProfesionales.Examples.Stages.StageExample;
 import javafx.application.Application;
@@ -36,8 +38,10 @@ public class MainApp extends Application {
         //TUTORIAL
         //showStageExample();
         //showDrawingStuffExample();
+        //showEventHandlingSceneBuilderExample();
         //ejemplos propios
-        showLoginExampleLayoutFXMLExample();
+        showMVCCompleteDesignExample();
+        //showLoginExampleLayoutFXMLExample();
         //showButtonManualExample();
         //showButtonFXMLExample();
 
@@ -66,12 +70,17 @@ public class MainApp extends Application {
     private void showStageExample(){
         Navigator.show(new StageExample().view(), WindowSpec.SMALL);
     }
-
+    private void showEventHandlingSceneBuilderExample(){
+        Navigator.show(new EventHandlingSceneBuilderExample().view(), WindowSpec.MEDIUM);
+    }
     private void showDrawingStuffExample(){
         Navigator.show(new DrawingStuffExample().view(), WindowSpec.of(600,600));
     }
 
     //PROPIOS
+    private void showMVCCompleteDesignExample(){
+        Navigator.show(new MVCCompleteDesignExample().view(), WindowSpec.of(600,600));
+    }
     private void showLoginExampleLayoutFXMLExample(){
         Navigator.show(new LoginExampleLayoutFXMLExample().view(), WindowSpec.LARGE);
     }
