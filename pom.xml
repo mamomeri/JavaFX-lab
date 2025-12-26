@@ -1,40 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="
+            http://maven.apache.org/POM/4.0.0
+            http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.HabilidadesProfesionales</groupId>
     <artifactId>JavaFXPractica</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- =====================================================
+         PROPIEDADES GENERALES
+         ===================================================== -->
     <properties>
+        <!-- Java moderno -->
         <maven.compiler.release>23</maven.compiler.release>
+
+        <!-- Encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Versión JavaFX centralizada -->
         <javafx.version>23.0.1</javafx.version>
     </properties>
 
+    <!-- =====================================================
+         DEPENDENCIAS JAVAFX
+         ===================================================== -->
     <dependencies>
+
+        <!-- Controles básicos (Button, Label, Layouts, etc.) -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
         </dependency>
 
+        <!-- FXMLLoader, FXML -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
         </dependency>
+
+        <!-- MediaView, MediaPlayer, AudioClip -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+        <!-- 🔥 WebView, WebEngine (NAVEGADOR) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
     </dependencies>
 
+    <!-- =====================================================
+         BUILD / PLUGINS
+         ===================================================== -->
     <build>
         <plugins>
+
+            <!-- Plugin oficial JavaFX para Maven -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
+
                 <configuration>
+                    <!-- Clase principal JavaFX -->
                     <mainClass>com.HabilidadesProfesionales.App.MainApp</mainClass>
                 </configuration>
             </plugin>
