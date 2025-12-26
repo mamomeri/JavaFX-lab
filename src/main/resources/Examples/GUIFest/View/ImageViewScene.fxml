@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.HabilidadesProfesionales.Examples.GUIFest.Controller.ImageViewController">
+   <children>
+      <ImageView fx:id="myImageView" fitHeight="251.0" fitWidth="345.0" layoutX="215.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/login.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="myButton" layoutX="275.0" layoutY="332.0" mnemonicParsing="false" onAction="#displayImage" text="Button" />
+   </children>
+</AnchorPane>

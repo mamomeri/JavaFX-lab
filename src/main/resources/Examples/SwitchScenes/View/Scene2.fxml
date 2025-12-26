@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.HabilidadesProfesionales.Examples.SwitchScenes.Controller.SwitchScenesController2">
+   <children>
+      <Label layoutY="83.0" prefHeight="46.0" prefWidth="600.0" text="Bienvenido a la escena 2" textAlignment="CENTER">
+         <font>
+            <Font name="Corbel Light" size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="274.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchToScene1" text="cambiar escena 1" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.HabilidadesProfesionales.Examples.MVCCompleteDesing.Controller.MainController"
+            styleClass="app-root"
+            prefWidth="900.0" prefHeight="550.0">
+
+    <top>
+        <VBox spacing="10" style="-fx-padding: 12;">
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <Label text="Simulador de Cola de Impresión"
+                       styleClass="title-main"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label text="Velocidad (ms/página):" styleClass="muted"/>
+                <Slider fx:id="speedSlider" prefWidth="240"/>
+            </HBox>
+
+            <!-- si quieres mostrar si está pausado -->
+            <Label fx:id="pausedLbl" text="" styleClass="muted"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="14" style="-fx-padding: 12;">
+
+            <VBox spacing="8">
+                <Label text="Cola (Queue)" styleClass="title-section"/>
+
+                <TableView fx:id="queueTable" prefHeight="320">
+                    <columns>
+                        <TableColumn fx:id="colTitle" text="Título" prefWidth="300"/>
+                        <TableColumn fx:id="colPages" text="Páginas" prefWidth="90"/>
+                        <TableColumn fx:id="colPriority" text="Prioridad" prefWidth="90"/>
+                        <TableColumn fx:id="colStatus" text="Estado" prefWidth="120"/>
+                        <TableColumn fx:id="colProgress" text="Progreso" prefWidth="120"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <Separator/>
+
+            <VBox spacing="8">
+                <Label text="Trabajo activo" styleClass="title-section"/>
+
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Activo:"/>
+                    <Label fx:id="activeJobLbl" text="(ninguno)" styleClass="muted"/>
+                </HBox>
+
+                <ProgressBar fx:id="activeProgressBar" prefWidth="700"/>
+            </VBox>
+
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="8" style="-fx-padding: 12;">
+            <HBox spacing="10">
+                <Button fx:id="btnNewJob" text="Nuevo Job"/>
+                <Button fx:id="btnPause" text="Pausar/Reanudar"/>
+                <Button fx:id="btnCancelActive" text="Cancelar Activo"/>
+                <Button fx:id="btnCancelSelected" text="Cancelar Seleccionado"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="btnGoStats" text="Ver Detalles / Stats →" styleClass="primary"/>
+            </HBox>
+
+            <Label fx:id="statusLbl" text="Listo" styleClass="muted"/>
+        </VBox>
+    </bottom>
+
+</BorderPane>

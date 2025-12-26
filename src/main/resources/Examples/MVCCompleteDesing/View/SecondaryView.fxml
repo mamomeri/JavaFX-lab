@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.HabilidadesProfesionales.Examples.MVCCompleteDesing.Controller.SecondaryController"
+            styleClass="app-root"
+            prefWidth="900.0" prefHeight="550.0">
+
+    <top>
+        <HBox spacing="12" alignment="CENTER_LEFT" style="-fx-padding: 12;">
+            <Label text="Detalle y Estadísticas"
+                   styleClass="title-main" />
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="btnBack" text="← Volver" prefWidth="120"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="14" style="-fx-padding: 12;">
+
+            <TitledPane text="Trabajo activo" expanded="true">
+                <content>
+                    <VBox spacing="8" style="-fx-padding: 10;">
+                        <Label fx:id="activeDetailLbl" text="(ninguno)"/>
+                        <ProgressBar fx:id="activeProgressBar2" prefWidth="700"/>
+                    </VBox>
+                </content>
+            </TitledPane>
+
+            <TitledPane text="Estadísticas" expanded="true">
+                <content>
+                    <GridPane hgap="12" vgap="10" style="-fx-padding: 10;">
+                        <Label text="Completados:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <Label fx:id="completedLbl" text="0" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Cancelados:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <Label fx:id="canceledLbl" text="0" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Promedio ms/página:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <Label fx:id="avgMsPerPageLbl" text="0" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    </GridPane>
+                </content>
+            </TitledPane>
+
+            <TitledPane text="Historial" expanded="true">
+                <content>
+                    <TableView fx:id="historyTable" prefHeight="250">
+                        <columns>
+                            <TableColumn fx:id="hTitle" text="Título" prefWidth="300"/>
+                            <TableColumn fx:id="hPages" text="Páginas" prefWidth="90"/>
+                            <TableColumn fx:id="hPriority" text="Prioridad" prefWidth="90"/>
+                            <TableColumn fx:id="hStatus" text="Estado" prefWidth="120"/>
+                        </columns>
+                    </TableView>
+                </content>
+            </TitledPane>
+
+        </VBox>
+    </center>
+
+</BorderPane>

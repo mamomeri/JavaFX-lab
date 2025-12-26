@@ -1,0 +1,136 @@
+/* =========================================================
+   LAB THEME – MVCCompleteDesign (AISLADO)
+   - Sin “variables” custom (JavaFX CSS se queja)
+   - Inter 24pt para UI
+   - Bebas Neue para títulos grandes
+   ========================================================= */
+
+.app-root {
+    -fx-background-color: #f8fafc;
+    -fx-font-family: "Inter 24pt";
+    -fx-font-size: 14px;
+}
+
+/* Forzar familia en controles típicos */
+.app-root .label,
+.app-root .button,
+.app-root .table-view,
+.app-root .table-cell,
+.app-root .titled-pane,
+.app-root .text-field,
+.app-root .password-field {
+    -fx-font-family: "Inter 24pt";
+}
+
+/* ===== Titles ===== */
+.app-root .title-main {
+    -fx-font-family: "Bebas Neue";
+    -fx-font-size: 34px;      /* más grande */
+    -fx-text-fill: #0f172a;
+    -fx-letter-spacing: 1.2px; /* se nota más “display” */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0.25, 0, 2);
+}
+
+.app-root .title-section {
+    -fx-font-family: "Inter 24pt SemiBold";
+    -fx-font-size: 15px;
+    -fx-text-fill: #0f172a;
+}
+
+.app-root .muted {
+    -fx-text-fill: #475569;
+}
+
+/* ===== TableView ===== */
+.app-root .table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: #dbe3ee;
+    -fx-border-width: 1;
+    -fx-padding: 6;
+}
+
+.app-root .table-view .column-header-background {
+    -fx-background-color: linear-gradient(#f1f5f9, #e5e7eb);
+    -fx-background-radius: 14 14 0 0;
+}
+
+.app-root .table-view .column-header .label {
+    -fx-font-family: "Inter 24pt Medium";
+    -fx-text-fill: #0f172a;
+}
+
+.app-root .table-row-cell:filled:hover {
+    -fx-background-color: #f8fafc;
+}
+
+.app-root .table-row-cell:filled:selected {
+    -fx-background-color: #dbeafe;
+}
+
+/* ===== TitledPane (para la pantalla Secondary) ===== */
+.app-root .titled-pane > .title {
+    -fx-background-color: linear-gradient(#f1f5f9, #e5e7eb);
+    -fx-background-radius: 12 12 0 0;
+    -fx-border-color: #dbe3ee;
+    -fx-border-width: 1;
+    -fx-border-radius: 12 12 0 0;
+}
+
+.app-root .titled-pane > *.content {
+    -fx-background-color: white;
+    -fx-border-color: #dbe3ee;
+    -fx-border-width: 0 1 1 1;
+    -fx-border-radius: 0 0 12 12;
+    -fx-background-radius: 0 0 12 12;
+}
+
+/* ===== Buttons ===== */
+.app-root .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #0f172a;
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-color: #dbe3ee;
+    -fx-border-width: 1;
+    -fx-padding: 8 16;
+}
+
+.app-root .button:hover {
+    -fx-border-color: #2563eb;
+}
+
+.app-root .button.primary {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+/* ===== Slider ===== */
+.app-root .slider .track {
+    -fx-background-color: #e5e7eb;
+}
+
+.app-root .slider .thumb {
+    -fx-background-color: #2563eb;
+}
+
+/* ===== ProgressBar ===== */
+.app-root .progress-bar {
+    -fx-accent: #2563eb;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #dbe3ee;
+    -fx-border-width: 1;
+    -fx-background-color: white;
+}
+
+.app-root .progress-bar .track {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 10;
+}
+
+.app-root .progress-bar .bar {
+    -fx-background-radius: 10;
+}

@@ -1,0 +1,60 @@
+/* ===== Fondo / overlay ===== */
+.root {
+    -fx-font-family: "Verdana";
+}
+
+/* overlay oscuro encima de la foto */
+.dark-overlay {
+    -fx-background-color: rgba(0,0,0,0.35);
+}
+
+/* ===== Card ===== */
+.card {
+    -fx-background-color: rgba(18,18,22,0.72);
+    -fx-background-radius: 22;
+    -fx-padding: 28;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 30, 0.15, 0, 10);
+}
+
+/* ===== Textos ===== */
+.brand {
+    -fx-text-fill: #F9FAFB;
+}
+
+.title {
+    -fx-text-fill: #E5E7EB;
+}
+
+/* ===== Inputs ===== */
+.field {
+    -fx-background-color: rgba(255,255,255,0.10);
+    -fx-text-fill: #F9FAFB;
+    -fx-prompt-text-fill: rgba(249,250,251,0.55);
+
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: rgba(255,255,255,0.16);
+    -fx-border-width: 1;
+}
+
+.field:focused {
+    -fx-border-color: #60A5FA;
+    -fx-border-width: 2;
+}
+
+/* ===== Botón ===== */
+.primary-btn {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-font-weight: bold;
+    -fx-padding: 10 16 10 16;
+}
+
+.primary-btn:hover {
+    -fx-background-color: #2563EB;
+}
+
+.primary-btn:pressed {
+    -fx-background-color: #1D4ED8;
+}

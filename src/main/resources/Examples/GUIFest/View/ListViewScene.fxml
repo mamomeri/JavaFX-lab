@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <?import javafx.geometry.Insets?>
+
+        <?import javafx.scene.control.Label?>
+
+        <?import javafx.scene.control.ListView?>
+
+        <?import javafx.scene.layout.AnchorPane?>
+
+        <?import javafx.scene.text.Font?>
+
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.HabilidadesProfesionales.Examples.GUIFest.Controller.ListViewController">
+
+<padding>
+
+    <Insets right="10.0" />
+
+</padding>
+
+<children>
+
+    <ListView fx:id="myListView" layoutX="130.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+
+    <Label fx:id="myLabel" alignment="CENTER" layoutY="33.0" prefHeight="43.0" prefWidth="459.0" text="Select a food">
+
+        <font>
+
+            <Font size="29.0" />
+
+        </font>
+
+    </Label>
+
+</children>
+
+</AnchorPane>

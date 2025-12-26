@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="root"
+           xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.HabilidadesProfesionales.Examples.ScenesAndDrawingStuff.Controller.LoginController"
+           stylesheets="@login.css">
+
+    <!-- Fondo -->
+    <ImageView fx:id="bgImage" preserveRatio="false"/>
+
+    <!-- Overlay oscuro -->
+    <Region fx:id="darkOverlay" styleClass="dark-overlay"/>
+
+    <!-- Centro -->
+    <StackPane alignment="CENTER">
+        <VBox fx:id="card"
+              alignment="CENTER"
+              spacing="14"
+              minWidth="560"  prefWidth="560"  maxWidth="560"
+              minHeight="460" prefHeight="460" maxHeight="460"
+              styleClass="card">
+
+            <Label fx:id="brandLabel"
+                   text="Tu empresa aquí"
+                   styleClass="brand"/>
+
+            <ImageView fx:id="userIcon"
+                       fitWidth="110" fitHeight="110"
+                       preserveRatio="true"
+                       smooth="true"/>
+
+            <Label fx:id="titleLabel"
+                   text="Iniciar sesión"
+                   styleClass="title"/>
+
+            <TextField fx:id="userField"
+                       promptText="Usuario"
+                       prefWidth="380" maxWidth="380"
+                       styleClass="field"/>
+
+            <PasswordField fx:id="passField"
+                           promptText="Contraseña"
+                           prefWidth="380" maxWidth="380"
+                           styleClass="field"/>
+
+            <Button fx:id="loginBtn"
+                    text="Entrar"
+                    prefWidth="380" maxWidth="380"
+                    onAction="#onLogin"
+                    styleClass="primary-btn"/>
+
+            <Label fx:id="status" text=""/>
+        </VBox>
+    </StackPane>
+
+</StackPane>
